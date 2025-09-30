@@ -1,4 +1,3 @@
-// frontend/src/components/ResultCard.jsx
 import React from "react";
 
 function ResultCard({ data }) {
