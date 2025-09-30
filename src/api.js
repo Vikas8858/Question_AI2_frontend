@@ -8,7 +8,10 @@ export async function checkQuestion(text) {
 
         if (!response.ok) throw new Error("Network error");
 
-        return await response.json();
+        const data = await response.json();  // ✅ only once
+        console.log('DATA:', data);
+        return data;                         // ✅ return same object
+
     } catch (err) {
         console.error(err);
         return { isQuestion: false, rewrittenQuestion: text };
